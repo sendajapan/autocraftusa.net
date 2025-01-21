@@ -1,0 +1,1 @@
+[27-Jul-2020 11:23:17 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 23040000 bytes) in /home/globa225/autohauschile.com/adminPanel/orakuploader/orakuploader.php on line 80
