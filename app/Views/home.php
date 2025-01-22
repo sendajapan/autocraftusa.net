@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-lg-6 mt-5 pt-5">
-                <img src="<?=base_url("public/assets/images/image.png")?>" alt="" style="width:100%;">
+                <img src="<?=base_url("public/assets/images/Image.png")?>" alt="" style="width:100%;">
             </div>
         </div>
     </div>
