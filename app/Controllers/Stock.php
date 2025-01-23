@@ -549,11 +549,11 @@ class Stock extends BaseController
                      {
 
 
-                        $email_obj->setFrom('rztech139@gmail.com', 'AUTOCRAFT USA');   
+                        $email_obj->setFrom('info@autocraftusa.net', 'AUTOCRAFT USA');   
                         //$email_obj->setTo('mnoman55@gmail.com');        
                         // $email_obj->setTo('info@autocraftkorea.com');        
                         // $email_obj->setBCC('info@autocraftkorea.com');            
-                        $email_obj->setTo('rztech139@gmail.com');   
+                        $email_obj->setTo('info@autocraftusa.net');   
 
                         $email_obj->setSubject('Autocraft USA - Car Inquiry from '.$name);
                         $test = '<table width="800px" style="font-family:calibri;">
