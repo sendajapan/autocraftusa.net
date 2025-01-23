@@ -659,16 +659,16 @@
                 <div class="item">
                     <a href="<?=base_url('make/Cadillac')?>">
                         <div class="services-components text-center">
-                            <img src="<?=base_url("public/assets/images/makes/R 1.png")?>" alt="makes">
+                            <img src="<?=base_url("public/assets/images/makes/cadillac-logo.jpg")?>" alt="makes">
                             <h5>CADILLAC</h5>
                         </div>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="<?=base_url('make/Honda')?>">
+                    <a href="<?=base_url('make/Chevrolet ')?>">
                         <div class="services-components text-center">
-                            <img src="<?=base_url("public/assets/images/makes/honda.png")?>" alt="makes">
-                            <h5>Honda</h5>
+                            <img src="<?=base_url("public/assets/images/makes/char.png")?>" alt="makes">
+                            <h5>Chevrolet </h5>
                         </div>
                     </a>
                 </div>
