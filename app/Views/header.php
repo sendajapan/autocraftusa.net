@@ -55,7 +55,7 @@
 <nav class="navbar navbar-expand-lg navbar-light container-fluid position-relative sticky-top p-0 position-fixed top-0 start-0 w-100 shadow">
   <div class="container-fluid pe-0">
     <a class="navbar-brand-mobile" href="<?=base_url('/')?>">
-      <img style="width:260px;" src="<?=base_url("public/assets/images/logo.png")?>">
+      <img style="width:225px;" src="<?=base_url("public/assets/images/logo.png")?>">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>

@@ -1746,6 +1746,22 @@ padding: 15px;
 
 
 @media screen and (max-width: 575px) {
+  .stylish-btn {
+    padding: 10px 25px !important;
+    font-size: 19px !important;
+  }
+  .exp_box{
+    margin: -68px 122px 0px 58px !important;
+  }
+  .img2 {
+    margin: 88px 0px 0px -239px !important;
+  }
+  .img2, .img1 {
+    width: 225px !important;
+}
+  .page-title{
+    font-size:30px !important;
+  }
   .our-services h2{
     margin-bottom: 15px !important;
     font-size: 30px !important;
@@ -2014,11 +2030,11 @@ iconify-icon.search-icons {
   text-transform: capitalize;
 }
 
-  a.nav-link.active,
+  /* a.nav-link.active,
 a.nav-link:focus,
 a.nav-link:hover {
   color: rgb(0, 0, 0) !important;
-}
+} */
   .fact-card{
     margin-bottom: 20px;
   }
@@ -2786,7 +2802,6 @@ margin-top: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 50px;
-  width: 445px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
