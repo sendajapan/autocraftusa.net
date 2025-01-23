@@ -247,7 +247,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card rounded-5">
                             <div class="card-body p-0 ">
-                                <a class="figure" target="_blank" href="">
+                                <a class="figure" target="_blank" href="<?= base_url('car/'.$item['slug']) ?>">
                                     <?php if($item['featured_image']){ ?>
                                     <img src="<?=$item['featured_image']?>" class="card-img-top rounded-top-5"
                                         alt="...">
