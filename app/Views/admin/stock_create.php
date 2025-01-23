@@ -524,7 +524,7 @@ $(document).ready(function(){
 
 	$('#images').orakuploader({
     orakuploader : true,
-    orakuploader_path : '<?=base_url('public/assets/admin/orakuploader');?>',
+    orakuploader_path : '<?=base_url('public/assets/admin/orakuploader/');?>',
 
     orakuploader_main_path : '<?=base_url('public/assets/admin/uploads/stock');?>',
     orakuploader_thumbnail_path : '<?=base_url('public/assets/admin/uploads/stock/thumbs');?>',
