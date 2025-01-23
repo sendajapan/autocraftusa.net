@@ -181,14 +181,14 @@ $attribute_names = array('AC', 'POWER_STEERING', 'ABS', 'POWER_WINDOWS', 'SRS', 
 										<div class="control-group">
 											<label class="control-label" for="traction">Traction</label>
 											<div class="controls">
-												<label class="radio inline">
+												<label class="radio inline" for="traction1">
 													<input type="radio" id="traction1" name="traction" value="" checked> N/A
 												</label>
-												<label class="radio inline">
+												<label class="radio inline" for="traction2">
 													<input type="radio" id="traction2" name="traction" value="2WD" > 2WD
 												</label>
-												<label class="radio inline">
-													<input type="radio" id="traction1" name="traction" value="4WD"> 4WD
+												<label class="radio inline" for="traction3">
+													<input type="radio" id="traction3" name="traction" value="4WD"> 4WD
 												</label>
 											</div>
 										</div>										
@@ -198,10 +198,10 @@ $attribute_names = array('AC', 'POWER_STEERING', 'ABS', 'POWER_WINDOWS', 'SRS', 
 										<div class="control-group">
 											<label class="control-label" for="drive">Drive</label>
 											<div class="controls">
-												<label class="radio inline">
+												<label class="radio inline" for="drive1">
 													<input type="radio" id="drive1" name="drive" value="RHD" checked> RHD
 												</label>
-												<label class="radio inline">
+												<label class="radio inline" for="drive2">
 													<input type="radio" id="drive2" name="drive" value="LHD"> LHD
 												</label>
 											</div>

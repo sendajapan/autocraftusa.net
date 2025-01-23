@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Autocraft USA lnc</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="robots" content="noindex" />
 	<link href="<?=base_url()?>/public/assets/admin/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?=base_url()?>/public/assets/admin/css/bootstrap-responsive.min.css" rel="stylesheet">
