@@ -182,13 +182,13 @@ $attribute_names = array('AC', 'POWER_STEERING', 'ABS', 'POWER_WINDOWS', 'SRS', 
 											<label class="control-label" for="traction">Traction</label>
 											<div class="controls">
 												<label class="radio inline">
-													<input type="radio" id="traction" name="traction" value="" checked> N/A
+													<input type="radio" id="traction1" name="traction" value="" checked> N/A
 												</label>
 												<label class="radio inline">
-													<input type="radio" id="traction" name="traction" value="2WD" > 2WD
+													<input type="radio" id="traction2" name="traction" value="2WD" > 2WD
 												</label>
 												<label class="radio inline">
-													<input type="radio" id="traction" name="traction" value="4WD"> 4WD
+													<input type="radio" id="traction1" name="traction" value="4WD"> 4WD
 												</label>
 											</div>
 										</div>										
@@ -199,10 +199,10 @@ $attribute_names = array('AC', 'POWER_STEERING', 'ABS', 'POWER_WINDOWS', 'SRS', 
 											<label class="control-label" for="drive">Drive</label>
 											<div class="controls">
 												<label class="radio inline">
-													<input type="radio" id="drive" name="drive" value="RHD" checked> RHD
+													<input type="radio" id="drive1" name="drive" value="RHD" checked> RHD
 												</label>
 												<label class="radio inline">
-													<input type="radio" id="drive" name="drive" value="LHD"> LHD
+													<input type="radio" id="drive2" name="drive" value="LHD"> LHD
 												</label>
 											</div>
 										</div>										
@@ -430,10 +430,10 @@ $attribute_names = array('AC', 'POWER_STEERING', 'ABS', 'POWER_WINDOWS', 'SRS', 
 											<label class="control-label">Display on Website</label>
 											<div class="controls">
 												<label class="radio inline">
-													<input type="radio" id="display_website" name="display_website" value="1" checked> Yes
+													<input type="radio" id="display_website1" name="display_website" value="1" checked> Yes
 												</label>
 												<label class="radio inline">
-													<input type="radio" id="display_website" name="display_website" value="0"> No
+													<input type="radio" id="display_website2" name="display_website" value="0"> No
 												</label>
 											</div>
 										</div>

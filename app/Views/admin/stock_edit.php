@@ -206,13 +206,13 @@
 											<label class="control-label">Traction</label>
 											<div class="controls">
 												<label class="radio inline">
-													<input type="radio" id="traction" name="traction" value="" <?php if($veh['traction'] == ""){echo 'checked';} ?> > N/A
+													<input type="radio" id="traction1" name="traction" value="" <?php if($veh['traction'] == ""){echo 'checked';} ?> > N/A
 												</label>
 												<label class="radio inline">
-													<input type="radio" id="traction" name="traction" value="2WD" <?php if($veh['traction'] == "2WD"){echo 'checked';} ?>> 2WD
+													<input type="radio" id="traction2" name="traction" value="2WD" <?php if($veh['traction'] == "2WD"){echo 'checked';} ?>> 2WD
 												</label>
 												<label class="radio inline">
-													<input type="radio" id="traction" name="traction" value="4WD" <?php if($veh['traction'] == "4WD"){echo 'checked';} ?>> 4WD
+													<input type="radio" id="traction3" name="traction" value="4WD" <?php if($veh['traction'] == "4WD"){echo 'checked';} ?>> 4WD
 												</label>
 											</div>
 										</div>										
@@ -224,10 +224,10 @@
 											<label class="control-label">Drive</label>
 											<div class="controls">
 												<label class="radio inline">
-													<input type="radio" id="drive" name="drive" value="RHD"  <?php if($veh['drive'] == "RHD"){echo 'checked="checked"';} ?>> RHD
+													<input type="radio" id="drive1" name="drive" value="RHD"  <?php if($veh['drive'] == "RHD"){echo 'checked="checked"';} ?>> RHD
 												</label>
 												<label class="radio inline">
-													<input type="radio" id="drive" name="drive" value="LHD" <?php if($veh['drive'] == "LHD"){echo 'checked="checked"';} ?>> LHD
+													<input type="radio" id="drive2" name="drive" value="LHD" <?php if($veh['drive'] == "LHD"){echo 'checked="checked"';} ?>> LHD
 												</label>
 											</div>
 										</div>										
@@ -474,10 +474,10 @@ document.getElementById('interior_color_display').style.backgroundColor = '<?=@$
 											<label class="control-label">Display on Website</label>
 											<div class="controls">
 												<label class="radio inline">
-													<input type="radio" id="display_website" name="display_website" value="1" <?php if($veh['display_website'] == "1"){echo 'checked';} ?>> Yes
+													<input type="radio" id="display_website1" name="display_website" value="1" <?php if($veh['display_website'] == "1"){echo 'checked';} ?>> Yes
 												</label>
 												<label class="radio inline">
-													<input type="radio" id="display_website" name="display_website" value="0" <?php if($veh['display_website'] == "0"){echo 'checked';} ?>> No
+													<input type="radio" id="display_website2" name="display_website" value="0" <?php if($veh['display_website'] == "0"){echo 'checked';} ?>> No
 												</label>
 											</div>
 										</div>
