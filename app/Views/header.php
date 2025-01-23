@@ -100,7 +100,7 @@
           <ul class="navbar-nav align-items-center justify-content-center flex-grow-1">
             <li class="nav-item">
               <a class="<?= ($uri=='') ? '':''; ?> nav-link m-0" href="tel:+821055204441">
-                <i class="fas fa-phone" style="color: white;"></i>+82-10-5520-4441
+                <i class="fas fa-phone" style="color: white;"></i>+1 000 000-0000
               </a>
             </li>
           </ul>
