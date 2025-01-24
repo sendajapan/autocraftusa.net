@@ -504,7 +504,7 @@ document.getElementById('interior_color_display').style.backgroundColor = '<?=@$
 				$external_image_check = strpos($img['pic_url'],'http');
 				
 				if($external_image_check === false)
-				$attach_pics[] = base_url('public/assets/admin/uploads/stock/')."/".$img['pic_url'];
+				$attach_pics[] = base_url('public/assets/admin/uploads/stock')."/".$img['pic_url'];
 				else
 				$attach_pics[] = $img['pic_url'];
 
