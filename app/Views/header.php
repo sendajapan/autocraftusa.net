@@ -37,10 +37,10 @@
 
     <link rel="stylesheet" href="<?=base_url('public/assets/css/jquery-ui.min.css')?>" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- <link
+    <link
   rel="stylesheet"
   href="https://unpkg.com/swiper/swiper-bundle.min.css"
-/> -->
+/>
     <!-- script ================================================== -->
     <script src="<?=base_url('public/assets/js/modernizr.js')?>"></script>
 
