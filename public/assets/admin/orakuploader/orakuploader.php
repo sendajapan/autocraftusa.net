@@ -16,8 +16,8 @@ $thumbnail_path = '/home/globa225/autohauschile.com/adminPanel/uploads/stock/';*
 // $main_path = 'C:/xampp/htdocs/sendajapan/autocraftkorea.com/public/assets/admin/uploads/stock/';
 // $thumbnail_path = 'C:/xampp/htdocs/sendajapan/autocraftkorea.com/public/assets/admin/uploads/stock/thumbs/';
 
-$main_path = '/home/globa225/autocraftusa.net/public/assets/admin/uploads/stock';
-$thumbnail_path = '/home/globa225/autocraftusa.net/public/assets/admin/uploads/stock/thumbs';
+$main_path = '/home/globa225/autocraftusa.net/public/assets/admin/uploads/stock/';
+$thumbnail_path = '/home/globa225/autocraftusa.net/public/assets/admin/uploads/stock/thumbs/';
 
 if(isset($_GET['delete']))
 {
