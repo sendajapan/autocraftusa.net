@@ -232,10 +232,10 @@ var km_range_max = 1000000;
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script> -->
 <script src="<?=base_url('public/assets/js/jquery.validate.min.js')?>"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
-<script src="<?=base_url('public/assets/js/swiper-bundle.min.js')?>"></script>
+<!-- <script src="<?=base_url('public/assets/js/swiper-bundle.min.js')?>"></script> -->
 
 
 <script src="https://www.google.com/recaptcha/api.js?render=6LenXaYqAAAAAOpYOl81pk5ADV9DZq2BpNNo-TNr"></script>
