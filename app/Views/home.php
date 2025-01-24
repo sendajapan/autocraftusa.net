@@ -40,7 +40,7 @@
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
                             <div class="d-flex flex-column">
 
-                                <label for="vehicle-make2" class="form-label">Makes</label>
+                                <label for="vehicle-make2">Makes</label>
                                 <select name="make" id="vehicle-make2" class="form-select form-control">
                                     <option selected value=""> Make</option>
                                     <?php if($makes){
@@ -55,7 +55,7 @@
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
                             <div class="d-flex flex-column">
 
-                                <label for="v_model2" class="form-label">Model</label>
+                                <label for="v_model2">Model</label>
                                 <select name="model" id="v_model2" class="form-select form-control">
                                     <option value="">Model</option>
                                 </select>
@@ -66,7 +66,7 @@
 
                             <div class="d-flex flex-column">
 
-                                <label for="veh_condition" class="form-label">Condition</label>
+                                <label for="veh_condition">Condition</label>
                                 <select id="veh_condition" name="veh_condition" class="form-select form-control"
                                     id="vehicle">
                                     <option selected>Condition</option>
@@ -82,7 +82,7 @@
 
                             <div class="d-flex flex-column">
 
-                                <label for="body_type" class="form-label">Body Type</label>
+                                <label for="body_type">Body Type</label>
                                 <select id="body_type" name="body_type" class="form-select form-control">
                                     <option value="">Body Type</option>
                                     <?php if($body_types){
@@ -97,7 +97,7 @@
 
                             <div class="d-flex flex-column">
 
-                                <label for="transmission" class="form-label">Transmission</label>
+                                <label for="transmission">Transmission</label>
                                 <select id="transmission" name="transmission" class="form-select form-control">
                                     <option value="">Transmission</option>
                                     <?php if($transmissions){
@@ -112,7 +112,7 @@
 
                             <div class="d-flex flex-column">
 
-                                <label for="exterior_color" class="form-label">Color</label>
+                                <label for="exterior_color">Color</label>
                                 <select id="exterior_color" name="exterior_color" class="form-select form-control">
                                     <option value=""> Color</option>
                                     <?php if($colors){
@@ -128,7 +128,7 @@
 
                             <div class="d-flex flex-column">
 
-                                <label for="year_from" class="form-label">Date From</label>
+                                <label for="year_from">Date From</label>
 
                                 <select id="year_from" name="year_from" class="form-select form-control">
                                     <?php for($y=2000; $y<=date("Y"); $y++){ ?>
@@ -146,7 +146,7 @@
 
                             <div class="d-flex flex-column">
 
-                                <label for="year_to" class="form-label">Date To</label>
+                                <label for="year_to">Date To</label>
 
                                 <select id="year_to" name="year_to" class="form-select form-control">
                                     <?php for($y=date("Y"); $y>=2000; $y--){ ?>
@@ -162,7 +162,7 @@
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
                             <div class="d-flex flex-column">
 
-                                <label for="fuel" class="form-label">Fuel</label>
+                                <label for="fuel">Fuel</label>
                                 <select id="fuel" name="fuel" class="form-select form-control">
                                     <option value=""> Fuel</option>
                                     <?php if($fuels){
@@ -176,7 +176,7 @@
 
 
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
-                            <div class="d-grid" style="margin-top:45px">
+                            <div class="d-grid" style="margin-top:38px">
                                 <input type="submit" name="submit" value="Search Car" class="btn btn-secondary">
                             </div>
                         </div>

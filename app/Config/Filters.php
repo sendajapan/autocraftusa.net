@@ -73,7 +73,7 @@ class Filters extends BaseFilters
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
-            'session' => ['except' => ['admin','login', 'logout', '/', 'car/*', 'stock', 'contact', 'about', 'testimonials', 'get-models', 'per-page', 'sort-by', 'make/*', 'website/subscribtion', 'contact/submit', 'script/vehicles/import', 'ajax_vehicle_inquiry', 'auth/a/*', 'sitemap.xml','sohail']],
+            'session' => ['except' => ['admin','login', 'logout', '/', 'car/*', 'stock', 'contact', 'about', 'testimonials', 'get-models', 'per-page', 'sort-by', 'make/*', 'website/subscribtion', 'contact/submit', 'script/vehicles/import', 'ajax_vehicle_inquiry', 'auth/a/*', 'sitemap.xml','sohail','register',]],
         ],
         'after' => [
             // 'honeypot',
