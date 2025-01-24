@@ -35,7 +35,7 @@
             </a>
             
             <a class="brand" href="<?=base_url('admin/dashboard')?>">
-                Autocraft Korea lnc Administrative Panel
+                Autocraft USA lnc Administrative Panel
             </a>        
             
             <div class="nav-collapse">

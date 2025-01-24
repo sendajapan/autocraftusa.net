@@ -38,8 +38,9 @@
                     <h2 class="text-left mb-2">SEARCH <span class="text-primary"> VEHICLE </span></h2>
                     <form action="<?=base_url('stock')?>" method="post" class="row form-group flex-wrap" id="form2">
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
-                            <div class="input-group ">
+                            <div class="d-flex flex-column">
 
+                                <label for="vehicle-make2" class="form-label">Makes</label>
                                 <select name="make" id="vehicle-make2" class="form-select form-control">
                                     <option selected value=""> Make</option>
                                     <?php if($makes){
@@ -52,7 +53,9 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
-                            <div class="input-group ">
+                            <div class="d-flex flex-column">
+
+                                <label for="v_model2" class="form-label">Model</label>
                                 <select name="model" id="v_model2" class="form-select form-control">
                                     <option value="">Model</option>
                                 </select>
@@ -61,7 +64,9 @@
                         </div>
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
 
-                            <div class="input-group ">
+                            <div class="d-flex flex-column">
+
+                                <label for="veh_condition" class="form-label">Condition</label>
                                 <select id="veh_condition" name="veh_condition" class="form-select form-control"
                                     id="vehicle">
                                     <option selected>Condition</option>
@@ -75,7 +80,9 @@
                         </div>
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
 
-                            <div class="input-group ">
+                            <div class="d-flex flex-column">
+
+                                <label for="body_type" class="form-label">Body Type</label>
                                 <select id="body_type" name="body_type" class="form-select form-control">
                                     <option value="">Body Type</option>
                                     <?php if($body_types){
@@ -88,7 +95,9 @@
                         </div>
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
 
-                            <div class="input-group ">
+                            <div class="d-flex flex-column">
+
+                                <label for="transmission" class="form-label">Transmission</label>
                                 <select id="transmission" name="transmission" class="form-select form-control">
                                     <option value="">Transmission</option>
                                     <?php if($transmissions){
@@ -101,7 +110,9 @@
                         </div>
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
 
-                            <div class="input-group ">
+                            <div class="d-flex flex-column">
+
+                                <label for="exterior_color" class="form-label">Color</label>
                                 <select id="exterior_color" name="exterior_color" class="form-select form-control">
                                     <option value=""> Color</option>
                                     <?php if($colors){
@@ -112,8 +123,46 @@
 
                             </div>
                         </div>
+                     
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
-                            <div class="input-group ">
+
+                            <div class="d-flex flex-column">
+
+                                <label for="year_from" class="form-label">Date From</label>
+
+                                <select id="year_from" name="year_from" class="form-select form-control">
+                                    <?php for($y=2000; $y<=date("Y"); $y++){ ?>
+                                    <option <?= ($request->getPost('year_from')==$y) ? "selected": "" ?>
+                                        value="<?=$y?>">
+                                        <?=$y?>
+                                    </option>
+                                    <?php } ?>
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
+
+                            <div class="d-flex flex-column">
+
+                                <label for="year_to" class="form-label">Date To</label>
+
+                                <select id="year_to" name="year_to" class="form-select form-control">
+                                    <?php for($y=date("Y"); $y>=2000; $y--){ ?>
+                                    <option <?= ($request->getPost('year_to')==$y) ? "selected": "" ?> value="<?=$y?>">
+                                        <?=$y?>
+                                    </option>
+                                    <?php } ?>
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
+                            <div class="d-flex flex-column">
+
+                                <label for="fuel" class="form-label">Fuel</label>
                                 <select id="fuel" name="fuel" class="form-select form-control">
                                     <option value=""> Fuel</option>
                                     <?php if($fuels){
@@ -127,38 +176,7 @@
 
 
                         <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
-
-                            <div class="input-group">
-
-                                <select id="year_from" name="year_from" class="form-select form-control">
-                                    <?php for($y=2000; $y<=date("Y"); $y++){ ?>
-                                    <option <?= ($request->getPost('year_from')==$y) ? "selected": "" ?>
-                                        value="<?=$y?>">
-                                        <?=$y?>
-                                    </option>
-                                    <?php } ?>
-                                </select>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
-
-                            <div class="input-group">
-
-                                <select id="year_to" name="year_to" class="form-select form-control">
-                                    <?php for($y=date("Y"); $y>=2000; $y--){ ?>
-                                    <option <?= ($request->getPost('year_to')==$y) ? "selected": "" ?> value="<?=$y?>">
-                                        <?=$y?>
-                                    </option>
-                                    <?php } ?>
-                                </select>
-
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-6 col-md-6 mt-lg-0 mb-2">
-                            <div class="d-grid" style="margin-top:12px">
+                            <div class="d-grid" style="margin-top:45px">
                                 <input type="submit" name="submit" value="Search Car" class="btn btn-secondary">
                             </div>
                         </div>
@@ -361,8 +379,8 @@
 <section class="mt-5 pt-5">
     <div class="container about">
         <div class="row d-flex justify-content-around">
-            <div class="col-lg-3 col-md-12 col-sm-11"><img src="<?=base_url("public/assets/images/Background.png")?>" alt=""
-                    style="width:440px;"></div>
+            <div class="col-lg-3 col-md-12 col-sm-11"><img src="<?=base_url("public/assets/images/Background.png")?>"
+                    alt="" style="width:440px;"></div>
             <div class="col-lg-5 col-md-11 col-sm-11 abtus">
                 <div class="text-center aboutus d-flex align-items-center flex-column justify-content-center">
                     <h4>ABOUT US </h4>
@@ -372,8 +390,8 @@
                     <a href="<?=base_url("about")?>" class="btn btn-primary">Read More</a>
                 </div>
             </div>
-            <div class="col-lg-4 text-end col-md-12 col-sm-11"><img src="<?=base_url("public/assets/images/Background (1).png")?>" alt=""
-                    style="width:440px;"></div>
+            <div class="col-lg-4 text-end col-md-12 col-sm-11"><img
+                    src="<?=base_url("public/assets/images/Background (1).png")?>" alt="" style="width:440px;"></div>
         </div>
     </div>
 </section>
@@ -550,7 +568,8 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 video-container px-5 d-flex flex-column justify-content-center gap-4">
+            <div
+                class="col-lg-6 col-md-12 col-sm-12 video-container px-5 d-flex flex-column justify-content-center gap-4">
                 <h4 class="video_text">Enhanced performance for a smoother journey ahead</h4>
                 <p>Autocraft USA Car Finance allows you to get a quote without affecting your credit rating. Find a car
                     from any dealer, and we’ll do the rest. With a large panel of 30+ lenders we can help most drivers.
@@ -929,8 +948,7 @@
                         <p id="error_msg" class="d-none alert alert-danger">Something went wrong</p>
 
                         <div class="d-flex align-items-end w-100 justify-content-end">
-                            <button id="submit_btn"
-                                class="btn btn-primary mt-3 text-right">SUBMIT</button>
+                            <button id="submit_btn" class="btn btn-primary mt-3 text-right">SUBMIT</button>
                         </div>
                     </form>
                 </div>
