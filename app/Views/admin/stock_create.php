@@ -456,8 +456,10 @@ $attribute_names = array('AC', 'POWER_STEERING', 'ABS', 'POWER_WINDOWS', 'SRS', 
 
 										<div class="control-group">
                         <label class="control-label"></label>
-                      <div id="images" orakuploader="on"></div> 
-                    </div>
+						<div id="images" class="dropzone"></div>
+						<!-- <input type="file" id="images"> -->
+						</div>
+						<input type="hidden" name="uploaded_images" id="uploaded_images">
 
 
 										 <br />
@@ -518,36 +520,49 @@ $('#picture_<?=$i?>').change( function(event) {
 
 <?php } ?>
 
+</script>
 
 
-$(document).ready(function(){
+<script>
+Dropzone.autoDiscover = false;
+var uploadedImages = []; 
 
-	$('#images').orakuploader({
-    orakuploader : true,
-    orakuploader_path : '<?=base_url('public/assets/admin/orakuploader/');?>',
-
-    orakuploader_main_path : '<?=base_url('public/assets/admin/uploads/stock');?>',
-    orakuploader_thumbnail_path : '<?=base_url('public/assets/admin/uploads/stock/thumbs');?>',
-    
-    orakuploader_use_main : true,
-    orakuploader_use_sortable : true,
-    orakuploader_use_dragndrop : true,
-    
-    orakuploader_add_image : "<?=base_url('public/assets/admin/orakuploader/images/add.png')?>",
-    orakuploader_add_label : 'Browser for images',
-    
-    orakuploader_resize_to       : 800,
-    orakuploader_thumbnail_size  : 184,
-    
-    orakuploader_main_changed    : function (filename) {
-      $("#mainlabel-images").remove();
-      $("div").find("[filename='" + filename + "']").append("<div id='mainlabel-images' class='maintext'>Main Image</div>");
+var myDropzone = new Dropzone("#images", {
+    url: "<?= base_url('admin/stock/upload_images') ?>",
+    paramName: "file",
+    maxFilesize: 2, // MB
+    acceptedFiles: "image/*",
+    addRemoveLinks: true,
+    success: function(file, response) {
+        if (response.success) {
+            uploadedImages.push(response.fileName);
+            document.getElementById("uploaded_images").value = uploadedImages.join(",");
+            file.serverFileName = response.fileName; 
+        }
+    },
+    removedfile: function(file) {
+        if (file.serverFileName) {
+            fetch("<?= base_url('admin/stock/delete_image') ?>", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ fileName: file.serverFileName }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    uploadedImages = uploadedImages.filter(img => img !== file.serverFileName);
+                    document.getElementById("uploaded_images").value = uploadedImages.join(",");
+                    file.previewElement.remove();
+                } else {
+                    alert("Error: " + data.message);
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        }
     }
-
-  });
-
 });
-
 </script>
 
 <?=$this->endsection()?>

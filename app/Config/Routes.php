@@ -56,6 +56,7 @@ $routes->get('admin/messages_delete/(:num)', 'admin\AdminController::messages_de
 
 // vehicle data 
 // make
+
 $routes->match(['get','post'],'admin/vehicle/make', 'admin\AdminController::vehicle_make'); 
 $routes->get('admin/vehicle/make/create', 'admin\AdminController::vehicle_make_create'); 
 $routes->post('admin/vehicle/make/store', 'admin\AdminController::vehicle_make_store'); 
@@ -81,6 +82,13 @@ $routes->get('admin/inquiries', 'admin\AdminController::inquiries');
 $routes->get('admin/inquiries/delete/(:num)', 'admin\AdminController::inquiries_delete/$1');
 
 // stock controller
+$routes->post('admin/stock/edit_image', 'admin\StockController::edit_image');   
+$routes->post('admin/stock/upload_images', 'admin\StockController::upload_images');   
+$routes->post('admin/stock/delete_image', 'admin\StockController::delete_image');
+$routes->post('admin/stock/delete_edit_image', 'admin\StockController::delete_edit_image');
+
+
+
 $routes->match(['get','post'],'admin/stock', 'admin\StockController::get_stock');   
 $routes->get('admin/stock/create', 'admin\StockController::create_stock');   
 $routes->post('admin/stock/store', 'admin\StockController::store');   

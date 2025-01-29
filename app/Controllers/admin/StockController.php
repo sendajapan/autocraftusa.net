@@ -87,12 +87,162 @@ class StockController extends BaseController
         return view('admin/stock_create',$data);
     }
 
+
+
+
+    public function delete_image()
+    {
+        $data = $this->request->getJSON();
+        if (isset($data->fileName)) {
+            $fileName = $data->fileName;
+    
+            // Define paths
+            $stockPath = FCPATH . 'public/assets/admin/uploads/stock/' . $fileName;
+            $thumbsPath = FCPATH . 'public/assets/admin/uploads/stock/thumbs/' . $fileName;
+    
+            // Check if file exists and delete
+            if (is_file($stockPath)) {
+                unlink($stockPath);
+            }
+            if (is_file($thumbsPath)) {
+                unlink($thumbsPath);
+            }
+    
+            // Here you should remove the image from the session or database, depending on your storage mechanism
+            // Example: $this->imageModel->deleteImage($fileName);
+    
+            return $this->response->setJSON(['success' => true]);
+        }
+    
+        return $this->response->setJSON(['success' => false, 'message' => 'File not found.']);
+    }
+
+
+    public function delete_edit_image()
+    {
+        $data = $this->request->getJSON();
+        if (isset($data->fileName)) {
+            $fileName = $data->fileName;
+    
+            // Define paths
+            $stockPath = FCPATH . 'public/assets/admin/uploads/stock/' . $fileName;
+            $thumbsPath = FCPATH . 'public/assets/admin/uploads/stock/thumbs/' . $fileName;
+    
+            // Check if file exists and delete
+            if (is_file($stockPath)) {
+                unlink($stockPath);
+            }
+            if (is_file($thumbsPath)) {
+                unlink($thumbsPath);
+            }
+    
+            // Here you should remove the image from the session or database, depending on your storage mechanism
+            // Example: $this->imageModel->deleteImage($fileName);
+    
+            return $this->response->setJSON(['success' => true]);
+        }
+    
+        return $this->response->setJSON(['success' => false, 'message' => 'File not found.']);
+    }
+    
+    
+
+
+    public function upload_images()
+    {
+        if ($this->request->getFile('file')) {
+            $file = $this->request->getFile('file');
+            if ($file->isValid() && !$file->hasMoved()) {
+                $newName = $file->getName();
+    
+                // Define paths
+                $stockPath = FCPATH . 'public/assets/admin/uploads/stock/';
+                $thumbsPath = FCPATH . 'public/assets/admin/uploads/stock/thumbs/';
+    
+                // Ensure directories exist
+                if (!is_dir($stockPath)) {
+                    mkdir($stockPath, 0777, true);
+                }
+                if (!is_dir($thumbsPath)) {
+                    mkdir($thumbsPath, 0777, true);
+                }
+    
+                // Move the original file to the stock directory
+                $file->move($stockPath, $newName);
+    
+                // Create a thumbnail
+                $this->createThumbnail($stockPath . $newName, $thumbsPath . $newName, 200, 200);
+    
+                return $this->response->setJSON([
+                    'success'   => true,
+                    'stockPath' => base_url('public/assets/admin/uploads/stock/' . $newName),
+                    'thumbPath' => base_url('public/assets/admin/uploads/stock/thumbs/' . $newName),
+                    'fileName'  => $newName
+                ]);
+            }
+        }
+    
+        return $this->response->setJSON(['success' => false, 'message' => 'Invalid file upload.']);
+    }
+
+
+    public function edit_image()
+    {
+        if ($this->request->getFile('file')) {
+            $file = $this->request->getFile('file');
+            if ($file->isValid() && !$file->hasMoved()) {
+                $newName = $file->getName();
+    
+                // Define paths
+                $stockPath = FCPATH . 'public/assets/admin/uploads/stock/';
+                $thumbsPath = FCPATH . 'public/assets/admin/uploads/stock/thumbs/';
+    
+                // Ensure directories exist
+                if (!is_dir($stockPath)) {
+                    mkdir($stockPath, 0777, true);
+                }
+                if (!is_dir($thumbsPath)) {
+                    mkdir($thumbsPath, 0777, true);
+                }
+    
+                // Move the original file to the stock directory
+                $file->move($stockPath, $newName);
+    
+                // Create a thumbnail
+                $this->createThumbnail($stockPath . $newName, $thumbsPath . $newName, 200, 200);
+    
+                return $this->response->setJSON([
+                    'success'   => true,
+                    'stockPath' => base_url('public/assets/admin/uploads/stock/' . $newName),
+                    'thumbPath' => base_url('public/assets/admin/uploads/stock/thumbs/' . $newName),
+                    'fileName'  => $newName
+                ]);
+            }
+        }
+    
+        return $this->response->setJSON(['success' => false, 'message' => 'Invalid file upload.']);
+    }
+
+
+    private function createThumbnail($sourcePath, $thumbPath, $width, $height)
+    {
+        $image = \Config\Services::image()
+            ->withFile($sourcePath)
+            ->resize($width, $height, true, 'auto')
+            ->save($thumbPath);
+    }
+    
+
+
     public function store(){
         
         $make_name = $this->vehMakeModel->where('make_id',$this->request->getVar('make'))->findColumn('make_name');    
 
-        $images = $this->request->getPost('images');
-
+        // $images = $this->request->getPost('images');
+        $uploadimages = $this->request->getPost('uploaded_images');
+        $images = explode(',', $uploadimages); 
+      
+        
         if (!is_array($images)) {
             $images=array();
         }
@@ -214,10 +364,12 @@ class StockController extends BaseController
 
         $make_name = $this->vehMakeModel->where('make_id',$this->request->getVar('make'))->findColumn('make_name');
         $veh_id = $this->request->getVar('veh_id');
-        $images = $this->request->getPost('images');
+        $images = $this->request->getPost('edit_images');
+        $images = explode(',', $images); 
+        // $images = $this->request->getPost('images');
 
         $db_images = $this->VehicleImagesModel->where('veh_id',$veh_id)->findColumn('pic_url');
-        
+        $images = array_merge($db_images, $images);
 
         if (is_array($images)) {
 
