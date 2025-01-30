@@ -592,17 +592,15 @@
             ?>
                                             </div>
                                             <div class="control-group">
-                                                <label class="control-label">Uploaded Images</label>
-                                                <div id="uploaded-images-box"
-                                                    style="display: flex; flex-wrap: wrap; gap: 10px;">
-                                                    <?php foreach (array_unique($attach_pics) as $img) : // Remove duplicates ?>
-                                                    <div style="border: 1px solid #ddd; padding: 5px;">
-                                                        <img src="<?= $img ?>" alt="Image"
-                                                            style="width: 100px; height: 100px; object-fit: cover;">
-                                                    </div>
-                                                    <?php endforeach; ?>
-                                                </div>
-                                            </div>
+    <label class="control-label">Uploaded Images</label>
+    <div id="uploaded-images-box" style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <?php foreach (array_unique($attach_pics) as $img) : ?>
+            <div class="sortable-item" style="border: 1px solid #ddd; padding: 5px; cursor: grab;">
+                <img src="<?= $img ?>" alt="Image" style="width: 100px; height: 100px; object-fit: cover;">
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
 
                                             <div class="control-group">
                                                 <label class="control-label"></label>
@@ -692,6 +690,19 @@ var myDropzone = new Dropzone("#editimages", {
         }
     },
 });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        new Sortable(document.getElementById("uploaded-images-box"), {
+            animation: 150, // Smooth movement
+            ghostClass: "sortable-ghost", // Styling for the dragged item
+            onEnd: function (evt) {
+                console.log("New Order:", evt.to); // You can handle saving the new order here
+            }
+        });
+    });
 </script>
 
 <?=$this->endsection()?>
