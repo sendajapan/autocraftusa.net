@@ -523,16 +523,16 @@ $(document).ready(function(){
 
 $('#images').orakuploader({
 orakuploader : true,
-orakuploader_path : '<?=base_url('public/assets/admin/orakuploader');?>',
+orakuploader_path : '<?='/home/globa225/autocraftusa.net/public/assets/admin/orakuploader';?>',
 
-orakuploader_main_path : '<?=base_url('public/assets/admin/uploads/stock');?>',
-orakuploader_thumbnail_path : '<?=base_url('public/assets/admin/uploads/stock/thumbs');?>',
+orakuploader_main_path : '<?='/home/globa225/autocraftusa.net/public/assets/admin/uploads/stock';?>',
+orakuploader_thumbnail_path : '<?='/home/globa225/autocraftusa.net/public/assets/admin/uploads/stock/thumbs';?>',
 
 orakuploader_use_main : true,
 orakuploader_use_sortable : true,
 orakuploader_use_dragndrop : true,
 
-orakuploader_add_image : "<?=base_url('public/assets/admin/orakuploader/images/add.png')?>",
+orakuploader_add_image : "<?='/home/globa225/autocraftusa.net/public/assets/admin/orakuploader/images/add.png'?>",
 orakuploader_add_label : 'Browser for images',
 
 orakuploader_resize_to       : 800,
