@@ -681,6 +681,7 @@ var myDropzone = new Dropzone("#editimages", {
     url: "<?= base_url('admin/stock/edit_image') ?>",
     paramName: "file",
     maxFilesize: 2, // MB
+    maxFiles: 30,
     acceptedFiles: "image/*",
     addRemoveLinks: true,
     success: function(file, response) {

@@ -530,6 +530,7 @@ var uploadedImages = [];
 var myDropzone = new Dropzone("#images", {
     url: "<?= base_url('admin/stock/upload_images') ?>",
     paramName: "file",
+	maxFiles: 30,
     maxFilesize: 2, // MB
     acceptedFiles: "image/*",
     addRemoveLinks: true,
