@@ -571,15 +571,14 @@
 
 
                                             <div class="control-group">
-                                                <label class="control-label">Images</label>
-                                                <!-- <?php 
+											<label class="control-label">Images</label>
+											<!-- <?php 
 												//echo "<pre>";
 												//print_r($images);
 												//exit;
 												 ?> -->
-                                                <?php $attach_pics = array(); ?>
-                                                <?php 
-												foreach($images as $img){ 
+						<?php $attach_pics = array(); ?>
+            <?php foreach($images as $img){ 
 
 				$external_image_check = strpos($img['pic_url'],'http');
 				
@@ -588,37 +587,16 @@
 				else
 				$attach_pics[] = $img['pic_url'];
 
-            }			
-            ?>
-                                            </div>
+            }
+			
+			
+            ?>	
+										</div>
                                             <div class="control-group">
-    <label class="control-label">Uploaded Images</label>
-    <div id="uploaded-images-box" style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <?php foreach (array_unique($attach_pics) as $img) : ?>
-            <div class="sortable-item" style="border: 1px solid #ddd; padding: 5px; cursor: grab;">
-                <img src="<?= $img ?>" alt="Image" style="width: 100px; height: 100px; object-fit: cover;">
-            </div>
-        <?php endforeach; ?>
-    </div>
-</div>
-
-                                            <div class="control-group">
-                                                <label class="control-label"></label>
-                                                <div id="editimages" class="dropzone"></div>
-                                                <!-- <input type="file" id="images"> -->
-                                            </div>
-                                            <input type="hidden" name="edit_images" id="edit_images">
-
-
-
-
-
-
-
-                                            <!-- <div class="control-group">
                                         	<label class="control-label"></label>
 											<div id="images" orakuploader="on"></div>	
-										</div> -->
+										</div>
+
                                             <br />
 
 
@@ -672,37 +650,35 @@ function load_models_by_name(make) {
 
 
 <script>
-Dropzone.autoDiscover = false;
-var uploadedImages = []; // Store image filenames
 
-var myDropzone = new Dropzone("#editimages", {
-    url: "<?= base_url('admin/stock/edit_image') ?>",
-    paramName: "file",
-    maxFilesize: 2, // MB
-    maxFiles: 30,
-    acceptedFiles: "image/*",
-    addRemoveLinks: true,
-    success: function(file, response) {
-        if (response.success) {
-            uploadedImages.push(response.fileName);
-            document.getElementById("edit_images").value = uploadedImages.join(",");
-            file.serverFileName = response.fileName; // Store server filename
-        }
-    },
+$(document).ready(function(){
+	$('#images').orakuploader({
+		orakuploader : true,
+		orakuploader_path : '<?=base_url('public/assets/admin/orakuploader/')?>',
+
+		orakuploader_main_path : '<?=base_url('public/assets/admin/uploads/stock')?>',
+		orakuploader_thumbnail_path : '<?=base_url('public/assets/admin/uploads/stock/thumbs')?>',
+		
+		orakuploader_use_main : true,
+		orakuploader_use_sortable : true,
+		orakuploader_use_dragndrop : true,
+		<?php if(!empty($attach_pics)) { ?>
+		orakuploader_attach_images : ['<?=implode("','",$attach_pics)?>'],
+		<?php } ?>
+		orakuploader_add_image : '<?=base_url('public/assets/admin/orakuploader/images/add.png')?>',
+		orakuploader_add_label : 'Browser for images',
+		
+		orakuploader_resize_to	     : 800,
+		orakuploader_thumbnail_size  : 184,
+		
+		orakuploader_main_changed    : function (filename) {
+			$("#mainlabel-images").remove();
+			$("div").find("[filename='" + filename + "']").append("<div id='mainlabel-images' class='maintext'>Main Image</div>");
+		}
+
+	});
 });
-</script>
 
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        new Sortable(document.getElementById("uploaded-images-box"), {
-            animation: 150, // Smooth movement
-            ghostClass: "sortable-ghost", // Styling for the dragged item
-            onEnd: function (evt) {
-                console.log("New Order:", evt.to); // You can handle saving the new order here
-            }
-        });
-    });
 </script>
 
 <?=$this->endsection()?>
