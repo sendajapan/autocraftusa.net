@@ -656,8 +656,8 @@ $(document).ready(function(){
 		orakuploader : true,
 		orakuploader_path : '<?=base_url('public/assets/admin/orakuploader/')?>',
 
-		orakuploader_main_path : '<?=base_url('public/assets/admin/uploads/stock')?>',
-		orakuploader_thumbnail_path : '<?=base_url('public/assets/admin/uploads/stock/thumbs')?>',
+		orakuploader_main_path : '<?=base_url('public/assets/admin/uploads/stock/')?>',
+		orakuploader_thumbnail_path : '<?=base_url('public/assets/admin/uploads/stock/thumbs/')?>',
 		
 		orakuploader_use_main : true,
 		orakuploader_use_sortable : true,

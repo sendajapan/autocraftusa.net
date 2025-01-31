@@ -3,6 +3,10 @@
 
 <?php
 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
 $attribute_names = array('AC', 'POWER_STEERING', 'ABS', 'POWER_WINDOWS', 'SRS', 'REAR_SPOILER', 'ROOF_RAIL', 'CD', 'TV', 'NAVIGATION', 'ALLOY_WHEEL', 'LEATHER_SEATS', 'BACKTYRE', 'RADIO', 'CENTRAL_LOCKING', 'POWER_MIRROR', 'BACK_CAMERA', 'FRONT_CAMERA', 'SUN_ROOF', 'DVD_Player', 'MD_Player', 'FOG_Lights', 'Body_Kit', 'Turbo', 'One_Owner', 'HID', 'POWER_SLIDE_DOOR', 'CORNER_SENSOR', 'STEERING_SWITCH', 'AUTO_AC', 'half_leather_seat', 'seven_seater', 'push_start', 'paddle_shift', 'double_power_slide_door','key_start',
 'double_moonroof',
 'maker_navi_tv',
@@ -523,10 +527,10 @@ $(document).ready(function(){
 
 $('#images').orakuploader({
 orakuploader : true,
-orakuploader_path : '<?=base_url('public/assets/admin/orakuploader');?>',
+orakuploader_path : '<?=base_url('public/assets/admin/orakuploader/');?>',
 
-orakuploader_main_path : '<?=base_url('public/assets/admin/uploads/stock');?>',
-orakuploader_thumbnail_path : '<?=base_url('public/assets/admin/uploads/stock/thumbs');?>',
+orakuploader_main_path : '<?=base_url('public/assets/admin/uploads/stock/');?>',
+orakuploader_thumbnail_path : '<?=base_url('public/assets/admin/uploads/stock/thumbs/');?>',
 
 orakuploader_use_main : true,
 orakuploader_use_sortable : true,
