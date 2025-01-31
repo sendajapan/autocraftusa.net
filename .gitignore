@@ -20,4 +20,5 @@ application/logs/*
 .env
 .htaccess
 orakuploader.php
-orakuploader.jsphp.ini
+orakuploader.js
+php.ini
