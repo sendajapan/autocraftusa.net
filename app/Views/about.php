@@ -26,11 +26,12 @@
                         <div></div>
                     </a>
                     <h1>Driven by Trust, Powered by Quality</h1>
-                    <p>we make car buying simple, reliable, and stress-free. With a wide selection of high-quality
-                        vehicles and a commitment to customer satisfaction, we help you find the perfect car that fits
-                        your lifestyle and budget. Whether you're looking for a brand-new model or a trusted pre-owned
-                        vehicle, our expert team is here to guide you every step of the way. Experience hassle-free car
-                        shopping with us today.</p>
+                    <p>At Autocraft USA, we are passionate about connecting customers with high-quality American
+                        vehicles through a seamless import and export process. With years of expertise in the automotive
+                        industry, we specialize in sourcing, trading, and delivering a wide range of new and used cars
+                        from trusted manufacturers, including Tesla, GMC, Ford, Cadillac, Chevrolet, and more. <br>
+                        Our goal is to simplify vehicle trading by offering transparent, efficient, and reliable services that cater to the needs of both individual buyers and businesses worldwide. Whether you are looking to import a dream car, trade-in your current vehicle, or explore auction opportunities, we ensure a smooth experience from start to finish.
+                    </p>
                 </div>
             </div>
             <div class="col-lg-7 col-md-12 col-sm-12">
@@ -64,19 +65,21 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 video-container px-5 d-flex flex-column justify-content-center gap-4">
-                <h4 class="video_text">Enhanced performance for a smoother journey ahead</h4>
-                <p>Autocraft USA Car Finance allows you to get a quote without affecting your credit rating. Find a car
-                    from any dealer, and we’ll do the rest. With a large panel of 30+ lenders we can help most drivers.
+            <div
+                class="col-lg-6 col-md-12 col-sm-12 video-container px-5 d-flex flex-column justify-content-center gap-4">
+                <h4 class="video_text">Why Choose Us?</h4>
+                <p>Diverse Inventory: We offer a vast selection of premium vehicles to match every preference and
+                    budget.<br>
+
+                    Global Network: With strong international partnerships, we facilitate hassle-free imports and
+                    exports.<br>
+
+                    Customer-Centric Approach: Your satisfaction is our priority, and we provide personalized assistance
+                    at every step.<br>
+
+                    Secure Transactions: We value trust and transparency, ensuring safe and reliable vehicle trading.
+
                 </p>
-                <div class="">
-                    <a href="<?=base_url("about")?>" class="btn stylish-btn">Read More <svg
-                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-chevron-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                        </svg></a>
-                </div>
             </div>
         </div>
     </div>

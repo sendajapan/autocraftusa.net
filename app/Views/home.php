@@ -415,8 +415,7 @@
                                 <img src="<?=base_url("public/assets/images/Icons.png")?>" alt="">
                                 <h3>Trade-in services</h3>
                             </div>
-                            <p class="m-0">Many dealerships offer a trade-in option where you can sell your car and use
-                                the value as a down payment on a new or used car......</p>
+                            <p class="m-0">We offer trade-in options, allowing you to sell your current vehicle and apply its value towards the purchase of a new or used car.</p>
                             <a href="<?=base_url("about")?>">View details <svg xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right"
                                     viewBox="0 0 16 16">
@@ -430,8 +429,7 @@
                                 <img src="<?=base_url("public/assets/images/Icons (2).png")?>" alt="">
                                 <h3>Instant Offer Services</h3>
                             </div>
-                            <p class="m-0">Services like Kelley Blue Book offer a fast and straightforward way to get an
-                                estimated value for your car. Some sites, like KBB or Edmunds......</p>
+                            <p class="m-0">Utilize our instant offer services to receive a fast and straightforward estimate for your car's value.</p>
                             <a href="<?=base_url("about")?>">View details <svg xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right"
                                     viewBox="0 0 16 16">
@@ -448,8 +446,7 @@
                                 <img src="<?=base_url("public/assets/images/Icons (1).png")?>" alt="">
                                 <h3>Auction Services</h3>
                             </div>
-                            <p class="m-0">Physical or online auctions (such as Copart or IAA for cars in bulk or
-                                salvage condition) can be an option if you want to sell your car quickly......</p>
+                            <p class="m-0">For those looking to sell their vehicles quickly, we provide access to physical and online auctions, including options for bulk or salvage conditions.</p>
                             <a href="<?=base_url("about")?>">View details <svg xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right"
                                     viewBox="0 0 16 16">
@@ -463,8 +460,7 @@
                                 <img src="<?=base_url("public/assets/images/Icons (3).png")?>" alt="">
                                 <h3>Consignment Services</h3>
                             </div>
-                            <p class="m-0">A consignment service allows you to hand over your car to a dealership or
-                                broker who will sell it for you, taking a commission for the service......</p>
+                            <p class="m-0">Our consignment service enables you to entrust your vehicle to us, where we handle the sale process on your behalf for a commission.</p>
                             <a href="<?=base_url("about")?>">View details <svg xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right"
                                     viewBox="0 0 16 16">
